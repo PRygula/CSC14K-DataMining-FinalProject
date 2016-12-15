@@ -1,0 +1,3 @@
+positive_sarcastic$3$3
+negative_not_sarcastic$96$61
+neutral_not_with_IWS$1201$1300
