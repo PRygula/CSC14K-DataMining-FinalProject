@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title> CSC 145K - Final Project</title>
+	
+<script>	
+function getData()
+{
+	var res = 'http://10.22.12.138:8080/TestServlet&term='
+}
+</script>
+
+    <!-- Bootstrap -->
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- load the d3.js library -->    
+<script src="http://d3js.org/d3.v4.min.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+    <script src="js/bootstrap.min.js"></script>
+	
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Team B: Blue Man Group</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Home </a></li>
+        <li class="active"><a href="#">Data<span class="sr-only">(current)</span></a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Extra Data<span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input class="form-control" placeholder="Search" type="text">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+       
+      </ul>
+    </div>
+  </div>
+</nav>
+  <body>
+    <h1>Welcome!</h1>
+	<blockquote>
+  <p>Below is the data for our #sarcasm analysis.</p>
+  <small>The PBLGA and IWS Algorithms <cite title="Source Title">Various Research Papers</cite></small>
+</blockquote>
+
+
+<center><img src="EedCb.png" alt="tree lexicon" align="middle"></center>
+<br/>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Algorithm Results</h3>
+  </div>
+  <div class="panel-body">
+   <table class="table table-hover table-inverse table-bordered">
+	<center>General Research Results Comparing PBLGA and IWS</center>
+  <thead>
+    <tr>
+      <th>Algorithm</th>
+      <th>Total Amount of Tweets</th>
+      <th>Total Amount of Caught Tweets</th>
+      <th>Sarcastic Tweet Ground Truth</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">PBLGA</th>
+      <td>1500</td>
+      <td>1064</td>
+      <td>1200</td>
+    </tr>
+    <tr>
+      <th scope="row">IWS</th>
+      <td>1000</td>
+      <td>826</td>
+      <td>733</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Parsing Based Lexical Generation Algorithm Results</h3>
+  </div>
+  <div class="panel-body">
+	   <table class="table table-hover table-inverse table-bordered">
+	<center>Research Supposed Results of PBLGA Algorithm</center>
+  <thead>
+    <tr>
+	<th></th>
+      <th>Total Tweets</th>
+      <th>Total Amount of Sarcastic Tweets</th>
+      <th>Sarcastic Tweet Ground Truth</th>
+      <th>Percentage of Accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">PBLGA</th>
+      <td>3500</td>
+      <td>1064</td>
+      <td>1200</td>
+	<td>88.67%</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+</div>
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title">Interjection Word Start Algorithm Results</h3>
+  </div>
+  <div class="panel-body">
+
+ <div class="container-fluid">
+  <h1>Examples</h1>
+  <div class="row">
+    <div class="col-sm-4" style="background-color:red; height: 150px;">
+     <b><p style="color:#000000;"><u>Raw Tweet</u></p>
+	<p style="color:#000000;">Oh sure. I don't mind going another semester  #Sarcasm </p>
+    <br></br>
+	</b>
+	</div>
+	<div class="col-sm-4" style="background-color:yellow; height: 150px;">
+	<b><p style="color:#000000;"><u>Part of Speech</u> </p>
+	<p style="color:#000000;">[(u'Oh', u'NOUN'), (u'sure', u'ADJ'), (u'.', u'PUNCT'), (u'I', u'PRON'), (u"don't", u'VERB'), (u'mind', u'VERB'), (u'going', u'VERB'), (u'another', u'DET'), (u'semester', u'NOUN'), (u'#', u'NUM'), (u'Sarcasm', u'NOUN')]</p>
+	</b>
+	</div>
+    <div class="col-sm-4" style="background-color:green; height: 150px;">
+      <b>
+	<p style="color:#000000;"><u>Database Entry</u></p>
+	<p style="color:#000000;"> Twitter_ID$Tweet$Sentiment_Score</p>
+	<p style="color:#000000;">803271797697347584$Oh sure. I don't mind going another semester  #Sarcasm$1 </p>
+	</b>
+    </div>
+  </div>
+</div>
+
+ <div class="container-fluid">
+  <h1>IWS Comparison</h1>
+  <div class="row">
+    <div class="col-sm-6">
+<table class="table table-hover table-inverse table-bordered">
+  <thead>
+	Research Paper Results (3500 Total IWS Tweets)
+    <tr>
+      <th>Resulting Sentiment</th>
+      <th>Total Amount of Tweets Caught</th>
+      <th>Sarcastic Tweet Ground Truth</th>
+      <th>Percentage of Accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Excluded</th>
+      <td>N/A</td>
+      <td>N/A</td>
+      <td>N/A</td>
+    </tr>
+    <tr>
+      <th scope="row">IWS (Not Tagged as Sarcastic)</th>
+      <td>999</td>
+      <td>1045</td>
+      <td>95.60%</td>
+    </tr>
+    <tr>
+      <th scope="row">IWS (Sarcastic)</th>
+      <td>826</td>
+      <td>733</td>
+      <td>12.69% Overshoot</td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+    <div class="col-sm-6">
+	<table class="table table-hover table-inverse table-bordered">
+  <thead>
+	Experimental Results (1300 Tweets Total)
+    <tr>
+      <th>Resulting Sentiment</th>
+      <th>Total Amount of Tweets Caught</th>
+      <th>Sarcastic Tweet Ground Truth</th>
+      <th>Percentage of Accuracy</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Excluded</th>
+      <td>1201</td>
+      <td>1236</td>
+      <td>97.17%</td>
+    </tr>
+    <tr>
+      <th scope="row">IWS (Not Tagged as Sarcastic)</th>
+      <td>96</td>
+      <td>61</td>
+      <td>57.38% Overshoot</td>
+    </tr>
+    <tr>
+      <th scope="row">IWS (Sarcastic)</th>
+      <td>3</td>
+      <td>3</td>
+      <td>100%</td>
+    </tr>
+  </tbody>
+</table>
+
+    </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+
+</body>
+
+<footer style="color:#6C6C6C">
+	<center><i><p> Presented to you by: Siobhan Stergis, Christopher DeMarco, and Patrick Rygula </p>
+		<p> CSC 145K: Mining the Social Web</p>
+		<p> Professor Lindo - Fall 2016<p></i>
+	</center>
+</footer>
+
+</html>

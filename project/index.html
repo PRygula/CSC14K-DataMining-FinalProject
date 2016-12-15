@@ -1,0 +1,283 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <!--
+    Modified from the Debian original for Ubuntu
+    Last updated: 2014-03-19
+    See: https://launchpad.net/bugs/1288690
+  -->
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>CSC 145K - 291A Mining The Social Web: Sentiment Analysis Project</title>
+    <style type="text/css" media="screen">
+  * {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  body, html {
+    padding: 3px 3px 3px 3px;
+
+    background-color: #D8DBE2;
+
+    font-family: Verdana, sans-serif;
+    font-size: 11pt;
+    text-align: center;
+  }
+
+  div.main_page {
+    position: relative;
+    display: table;
+
+    width: 800px;
+
+    margin-bottom: 3px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 0px 0px 0px;
+
+    border-width: 2px;
+    border-color: #212738;
+    border-style: solid;
+
+    background-color: #FFFFFF;
+
+    text-align: center;
+  }
+
+  div.page_header {
+    height: 99px;
+    width: 100%;
+
+    background-color: #F5F6F7;
+  }
+
+  div.page_header span {
+    margin: 15px 0px 0px 50px;
+
+    font-size: 180%;
+    font-weight: bold;
+  }
+
+  div.page_header img {
+    margin: 3px 0px 0px 40px;
+
+    border: 0px 0px 0px;
+  }
+
+  div.table_of_contents {
+    clear: left;
+
+    min-width: 200px;
+
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.table_of_contents_item {
+    clear: left;
+
+    width: 100%;
+
+    margin: 4px 0px 0px 0px;
+
+    background-color: #FFFFFF;
+
+    color: #000000;
+    text-align: left;
+  }
+
+  div.table_of_contents_item a {
+    margin: 6px 0px 0px 6px;
+  }
+
+  div.content_section {
+    margin: 3px 3px 3px 3px;
+
+    background-color: #FFFFFF;
+
+    text-align: left;
+  }
+
+  div.content_section_text {
+    padding: 4px 8px 4px 8px;
+
+    color: #000000;
+    font-size: 100%;
+  }
+
+  div.content_section_text pre {
+    margin: 8px 0px 8px 0px;
+    padding: 8px 8px 8px 8px;
+
+    border-width: 1px;
+    border-style: dotted;
+    border-color: #000000;
+
+    background-color: #F5F6F7;
+
+    font-style: italic;
+  }
+
+  div.content_section_text p {
+    margin-bottom: 6px;
+  }
+
+  div.content_section_text ul, div.content_section_text li {
+    padding: 4px 8px 4px 16px;
+  }
+
+  div.section_header {
+    padding: 3px 6px 3px 6px;
+
+    background-color: #8E9CB2;
+
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 112%;
+    text-align: center;
+  }
+
+  div.section_header_red {
+    background-color: #CD214F;
+  }
+
+  div.section_header_grey {
+    background-color: #9F9386;
+  }
+
+  .floating_element {
+    position: relative;
+    float: left;
+  }
+
+  div.table_of_contents_item a,
+  div.content_section_text a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  div.table_of_contents_item a:link,
+  div.table_of_contents_item a:visited,
+  div.table_of_contents_item a:active {
+    color: #000000;
+  }
+
+  div.table_of_contents_item a:hover {
+    background-color: #000000;
+
+    color: #FFFFFF;
+  }
+
+  div.content_section_text a:link,
+  div.content_section_text a:visited,
+   div.content_section_text a:active {
+    background-color: #DCDFE6;
+
+    color: #000000;
+  }
+
+  div.content_section_text a:hover {
+    background-color: #000000;
+
+    color: #DCDFE6;
+  }
+
+  div.validator {
+  }
+
+  img {
+    vertical-align: text-top;
+  }
+    </style>
+  </head>
+  <body>
+    <div class="main_page">
+      <div class="page_header floating_element">
+        <img src="csc145/img/hulogo.png" alt="Hofstra Lion Logo" align="left" class="img-responsive"/><br>
+          <h2>CSC 145K - 291A Mining the Social Web Sentiment Analysis Project </h2>
+          <h3>Opinion Mining from the Twitter API </h3>
+      </div>
+<!--      <div class="table_of_contents floating_element">
+        <div class="section_header section_header_grey">
+          TABLE OF CONTENTS
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#about">About</a>
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#changes">Changes</a>
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#scope">Scope</a>
+        </div>
+        <div class="table_of_contents_item floating_element">
+          <a href="#files">Config files</a>
+        </div>
+      </div>
+-->
+      <div class="content_section floating_element">
+
+
+        <div class="section_header section_header_red">
+          <div id="about"></div>
+          Project Overview 
+        </div>
+        <div class="content_section_text">
+          <p>
+The research project will focus on Sentiment Analysis/Opinion Mining.  This is a group project of teams size 3-4 (no more).  Each team will introduce sentiment analysis and discuss the current approaches for computing sentiment in the context of social media.  The research will also outline the main problems with sentiment analysis.  From the list of problem, the research will propose a solution, provide a design and demo the implementation of the solution.   The project is organized into three phases with points for each phase:
+<ul>
+   <li>Planning and  Design [ 40 points ]</li>
+   <li>Execution and Tracking [ 30 points ]</li>
+   <li>Presentation and Demo [ 30 points ]</li>
+
+</ul>
+          </p>
+
+
+        </div>
+        <div class="section_header">
+          <div id="changes"></div>
+                Project Guidelines 
+        </div>
+        <div class="content_section_text">
+          <p>
+<b>Divide and conquer:</b>  Break the project down into multiple parts and follow the software architecture principle of <u><a href="https://en.wikipedia.org/wiki/Separation_of_concerns">separation of concerns</a></u>.  When designing your components encapsulate your functionality in each domain area.
+<br><hr>
+Work Break Down Guidelines:  These are only suggestions; it is your project so feel free to design your own implementation (as a team!).  Data Mining includes multiple steps to acquire and deliver insightful information, for this project you may consider a separate component for each of the following: 
+<br>
+<ul>
+<li>Data Collection </li>
+<li>Data Cleansing </li>
+<li>Information Extraction </li>
+<li>Creating Analytics </li>
+<li>Visualization </li>
+
+</ul>
+<br><hr>
+          </p>
+	  <h3>Logical Architecture</h3>
+          <p>
+               The following diagram depicts the high-level architecture for this project.  The top rectangle represets software components. You will need to design each of your own software components. The items in the lower rectangle represents artifacts outcomes created by the software components.  
+          </p>
+      </div>
+      <div class="diagram_section">
+        <img src="csc145/img/sadiag.png" height="85%" width="85%" alt="Logical Architecture" class="img-responsive"/>
+      </div>
+<br><hr>
+<div class="bootstrap_section">
+<h3>Bootstrap Section</h3>
+<p>
+Bootstrap is installed for you to jumpstart your visualization.  The jumbotron example is installed here: and can be viewed from your browser at : <em>http://ipaddress/csc145/ </em>where the ipaddress is your own VM(s) ip-address.
+Bootstrap is a combination of html5, javascript and css.  If you need assistance with bootstrap you can find bootstrap tutorials here: <b>http://getbootstrap.com/getting-started/</b>
+</p>
+<br><hr>
+<h4>Dr. Steven C. Lindo, Hofstra University</h4>
+<h5>School of Engineering, Department of Computer Science</h5>
+</div>
+  </body>
+</html>
+
