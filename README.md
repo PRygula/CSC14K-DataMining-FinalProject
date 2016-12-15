@@ -1,1 +1,1 @@
-# CSC14K-DataMining-FinalProject
+# CSC145K-DataMining-FinalProject
